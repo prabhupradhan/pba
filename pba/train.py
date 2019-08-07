@@ -1,5 +1,5 @@
 """Train and evaluate models using augmentation schedules."""
-
+#It is also easy to use PBA on a custom dataset as well: simply define a new dataloader and everything else falls into place.
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
