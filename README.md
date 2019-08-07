@@ -24,6 +24,9 @@ See below for a visualization of our augmentation strategy.
 <img src="figs/augs_v2_crop.png" width="40%">
 </p>
 
+### Importance
+AutoAugment is a very expensive algorithm which requires training 15,000 models to convergence to generate enough samples for a reinforcement learning based policy. No computation is shared between samples, and it costs 15,000 NVIDIA Tesla P100 GPU hours to learn an ImageNet augmentation policy and 5,000 GPU hours to learn an CIFAR-10 one. For example, if using Google Cloud on-demand P100 GPUs, it would cost about $7,500 to discover a CIFAR policy, and $37,500 to discover an ImageNet one! Therefore, a more common use case when training on a new dataset would be to transfer a pre-existing published policy, which the authors show works relatively well.
+
 ### Getting Started
 Code supports Python 2 and 3.
 
